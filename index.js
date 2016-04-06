@@ -50,6 +50,7 @@ DataFrame.prototype.getResults = function() {
       }
 
       var result = curLevel[setKey].value
+      result._fact = row
 
       if (filter || !self.cache[setKey]) {
         if (!filter) setKeyCache[setKey] = result
